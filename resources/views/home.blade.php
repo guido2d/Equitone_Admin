@@ -32,7 +32,7 @@
                                 <td>{{ $c->telefono }}</td>
                                 <td>{{ $c->comuna }}</td>
                                 <td>{{ number_format($c->mt2aRevestir, 2, ',', '') }}</td>
-                                <td><a href="http://equitonecalc.local/ver-resultados/{{ $c->codigo }}" target="_blank" class=""><img src="{{ asset('img/detail.svg') }}" width="40"></a></td>
+                                <td><a href="http://equitone.activuat.com/ver-resultados/{{ $c->codigo }}" target="_blank" class=""><img src="{{ asset('img/detail.svg') }}" width="40"></a></td>
                             </tr>
                             @endforeach
                         </tbody>
