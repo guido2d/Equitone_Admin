@@ -20,6 +20,8 @@
                                 <th scope="col">Teléfono</th>
                                 <th scope="col">Comuna</th>
                                 <th scope="col">mt2</th>
+                                <th scope="col">¿Instalador?</th>
+                                <th scope="col">Fecha</th>
                                 <th scope="col">Detalle</th>
                             </tr>
                         </thead>
@@ -32,6 +34,8 @@
                                 <td>{{ $c->telefono }}</td>
                                 <td>{{ $c->comuna }}</td>
                                 <td>{{ number_format($c->mt2aRevestir, 2, ',', '') }}</td>
+                                <td>{{ $c->instalador }}</td>
+                                <td>{{ date( "d-m-Y H:i:s", strtotime($c->created_at)) }}</td>
                                 <td><a href="http://equitone.activuat.com/ver-resultados/{{ $c->codigo }}" target="_blank" class=""><img src="{{ asset('img/detail.svg') }}" width="40"></a></td>
                             </tr>
                             @endforeach
