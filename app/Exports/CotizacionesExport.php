@@ -17,7 +17,7 @@ class CotizacionesExport implements FromCollection, WithHeadings, ShouldAutoSize
     {
         return Cotizacion::join('formulario', 'formulario.codigo_cotizacion', '=', 'cotizaciones.codigo')
                 ->orderBy('formulario.created_at', 'desc')
-                ->select('formulario.codigo_cotizacion','formulario.nombre', 'formulario.email', 'formulario.telefono', 'formulario.comuna', 'cotizaciones.mt2aRevestir', 'formulario.instalador','formulario.created_at')
+                ->select('formulario.codigo_cotizacion','formulario.nombre', 'formulario.email', 'formulario.telefono', 'formulario.comuna', 'cotizaciones.mt2aRevestir', 'formulario.instalador',  'formulario.tiempo_construccion','formulario.created_at')
                 ->get();
     }
 
@@ -31,6 +31,7 @@ class CotizacionesExport implements FromCollection, WithHeadings, ShouldAutoSize
             'Comuna',
             'Mt2',
             '¿Instalador?',
+            'Tiempo Construcción',
             'Fecha de envío',
         ];
     }
